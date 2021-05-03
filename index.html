@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Adrián Hernández Ríos</title>
+    <!-- Se ha importado el CSS de bulma para el Layout sensible, se usa para garantizar 
+        un correcto funcionamiento en cualquier dispositivo.-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <div class="container has-text-centered block pt-6">
+        <h1>EURO ADRIRIOS VEGAS</h1>
+    </div>
+    <!-- Menú con botones, contador de monedas y espacio de premios -->
+    <nav class="level">
+        <!-- Boton de monedas. -->
+        <div class="level-item has-text-centered">
+            <div class="field is-grouped">
+                    <button class="button is-info is-big" id="moneda">
+                        <span class="icon is-small">
+                            <i class="fas fa-euro-sign"></i>
+                        </span>
+                      <span>Moneda</span>  
+                    </button>
+            </div>
+        </div>
+        <!-- Premios -->
+        <div class="level-item has-text-centered">
+            <div class="col">
+                <div id="premio" style="width: 20em; height: 3em;"></div>
+            </div>
+        </div>
+        <!-- Contador de monedas, botón de salida y de info.-->
+        <div class="level-item has-text-centered">
+        <div id="contador"></div>
+            <div>
+                <button class="button is-info is-big" id="salir">
+                    Salir
+                </button>
+                
+                <button class="button is-info is-small" id="buttonIn">
+                    <span class="icon">
+                        <i class="fas fa-question-circle"></i>
+                    </span>  
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!--Bloque con Slots contenedores de las frutas -->
+    <nav class="level is-justify-content-center">
+        <div class="columns is-mobile is-justify-content-space-between pt-5 is-1 is-vcentered" style="height: 295px;">
+            <div class="column has-text-centered is-one-third">
+                <div id="cuadro1fruta" class="" role="status"></div>
+            </div>
+            <div class="column has-text-centered is-one-third">
+                <div id="cuadro2fruta" class="" role="status"></div>
+            </div>
+            <div class="column has-text-centered is-one-third">
+                <div id="cuadro3fruta" class="" role="status">
+                </div>
+            </div>
+    </nav>
+
+<!-- Botón de jugar -->
+    <div class="container has-text-centered block">
+        <button id="buttonPlay" type="button">JUGAR</button>
+    </div>
+<!-- Tabla resumen de jugadas -->
+    <section class="section">
+        <div class="columns is-centered">
+            <div class="column is-narrow oculto" id="divTabla">              
+                <table class="table is-narrow has-text-centered has-background-grey-lighter">
+                    <thead>
+                        <tr>
+                            <th>Nº de Intento</th>
+                            <th>Monedas Gastadas</th>
+                            <th>Monedas Ganadas</th>
+                            <th>Crédito</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultados-jugadas">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+        <div class="modal" id="info">
+        <div class="modal-background"></div>
+        <div class="modal-content has-background-info-light p-2">
+                <p>Si sale una zanahoria, se gana una moneda.<br>
+                Si salen dos zanahorias, se ganan cuatro monedas.<br>
+                Si salen tres zanahorias, se ganan diez monedas.<br>
+                Si salen dos hortalizas iguales que no sean zanahorias, se ganan dos monedas.<br>
+                Si salen tres hortalizas iguales que no sean zanahorias, se ganan cinco monedas.<br>
+                Si sale una zanahoria y dos hortalizas iguales, se ganan tres monedas.</p><br>
+
+            <p>Se debe introducir el número de monedas que se desea para poder comenzar, una vez el juego comienze no se puede agregar más monedas durante la partida.<br>
+            En la parte inferior de la página web se podrá visualizar un resumen de todas las tiradas que se ha efectuado.</p>
+            </div>
+        <button class="modal-close is-large" aria-label="salir" id="cerrar-info"></button>
+        </div>
+        <script src="JQuery/scripts.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.15.0/js/all.js"></script>
+    </body>
+</html>

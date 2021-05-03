@@ -1,0 +1,82 @@
+html {
+  background-image: url("https://static.vecteezy.com/system/resources/previews/001/557/673/non_2x/abstract-wavy-blue-background-free-vector.jpg");
+  font-family: 'Impact', cursive !important;
+}
+button{
+  font-family: 'Impact', cursive !important;
+}
+
+@import 'https://fonts.googleapis.com/css?family=Rubik+One';
+
+#buttonPlay { 
+	padding: 5px 10px;
+	color: rgb(250, 137, 9);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Impact', sans-serif;
+	text-decoration: none;
+	font-size: 1vw;
+	transition: all .5s;
+	background-color: #135886;
+}
+
+h1 {
+  color: #f4fffd;
+  font-size: 2em;
+  font-family: 'Impact', cursive;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-name: titulo;
+
+}
+
+/* Animación del título */
+@keyframes titulo {
+  2%   {text-shadow: .2em -.3em .5em #900C3F;}
+}
+
+div#divfrutas{
+  height: 295px !important;
+}
+
+#contador {
+  background-color: #f4fffd;
+  width: 8em;
+  text-align: center;
+  border-radius: 10px ;
+  font-family: 'Impact', cursive;
+}
+
+#premio{
+    color: #f4fffd;
+    text-shadow: .2em -.2em .3em #F9DC5C;
+    font-family: Impact !important;
+}
+
+#cuadro1fruta, #cuadro2fruta, #cuadro3fruta {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.oculto{
+  display: none;
+}
+
+.slot-fruta {
+  animation-duration: 0.7s;
+  animation-name: slidein;
+}
+
+/* Animación de las frutas */
+@keyframes slidein {
+  from {
+    margin-right: 100%;
+    width: 0%;
+  }
+
+  to {
+    margin-right: 0%;
+    width: 100%;
+  }
+}
